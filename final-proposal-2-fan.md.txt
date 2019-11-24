@@ -1,0 +1,11 @@
+Mini Fan
+
+Remote controlled fan with various speeds
+
+## Summary
+This project will replicate a portable fan we use today.  It will use both mechanical and electrical components.  It will also feature different speeds the fan will spin at for stronger/weaker wind force.
+
+## Component Parts
+Mechanical parts will include fan blades, a housing unit and buttons.  Electrical components include the arduino UNO, jumper wires, bread board, servo motor, and batteries.
+
+Code that will be implemented control the servo motor speed and button fucntions.

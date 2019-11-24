@@ -1,0 +1,15 @@
+Mini Helicopter
+
+A toy that flies (mini helicopter)
+
+## Summary
+
+For this project, a mini toy helicopter will be created with arduino.  Just like drones you see today, this project will try to replicate them.  It will be interactive by incorporating a remote control to help control the movement.
+
+## Component Parts
+
+Mechanical parts will include fan blades and helo body.  The body will house the arduino UNO, IR sensor for a remote to control its functions, a 360 degree servo motor and batteries.
+
+Code that will be written and used will include the ability for a remote control to command the mini helicopter to fly.
+
+
