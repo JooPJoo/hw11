@@ -1,0 +1,70 @@
+#include <IRremote.h>
+#include <Servo.h>
+
+Servo myservo;
+
+int RECV_PIN = 9;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
+void stop() {
+  /*// Motor A
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+
+  // Motor B
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);*/
+
+  myservo.write(0 );
+}
+
+void setup() {
+  myservo.attach(11);
+
+  //IR remote
+  Serial.begin(9600);
+  Serial.println("Startup");
+  irrecv.enableIRIn();
+  //irrecv.blink13(true);
+
+Serial.begin(9600);
+  //pinMode(IN1, OUTPUT);
+  //pinMode(IN2, OUTPUT);
+  //pinMode(IN3, OUTPUT);
+  //pinMode(IN4, OUTPUT);
+  stop();
+}
+
+void loop() {
+  if (irrecv.decode(&results)) {
+    Serial.println(results.value);
+
+    // results.value = key_value;
+    if (results.value == 2724004350) {
+      
+      myservo.write(45);
+      delay(250);
+      myservo.write(135);
+      delay(250);
+
+      myservo.write(45);
+      delay(250);
+      myservo.write(135);
+      delay(250);
+
+      myservo.write(45);
+      delay(250);
+      myservo.write(135);
+      delay(250);
+
+      myservo.write(45);
+      delay(250);
+      myservo.write(135);
+      delay(250);
+      stop();
+    }
+ irrecv.resume();
+
+  }
+}
